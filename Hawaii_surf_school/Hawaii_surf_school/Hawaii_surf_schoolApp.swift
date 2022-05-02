@@ -11,7 +11,7 @@ import SwiftUI
 struct Hawaii_surf_schoolApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SpotView()
         }
     }
 }

@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		000421F0281FCA6F00681DC7 /* Hawaii_surf_schoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000421EF281FCA6F00681DC7 /* Hawaii_surf_schoolApp.swift */; };
-		000421F2281FCA6F00681DC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000421F1281FCA6F00681DC7 /* ContentView.swift */; };
+		000421F2281FCA6F00681DC7 /* SpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000421F1281FCA6F00681DC7 /* SpotView.swift */; };
 		000421F4281FCA7100681DC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000421F3281FCA7100681DC7 /* Assets.xcassets */; };
 		000421F7281FCA7100681DC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000421F6281FCA7100681DC7 /* Preview Assets.xcassets */; };
 		0004220228200B7D00681DC7 /* Hossegor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0004220128200B7D00681DC7 /* Hossegor.swift */; };
+		000422042820129D00681DC7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000422032820129D00681DC7 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		000421EC281FCA6F00681DC7 /* Hawaii_surf_school.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hawaii_surf_school.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		000421EF281FCA6F00681DC7 /* Hawaii_surf_schoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hawaii_surf_schoolApp.swift; sourceTree = "<group>"; };
-		000421F1281FCA6F00681DC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
+		000421F1281FCA6F00681DC7 /* SpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		000421F3281FCA7100681DC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		000421F6281FCA7100681DC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0004220128200B7D00681DC7 /* Hossegor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hossegor.swift; sourceTree = "<group>"; };
+		000422032820129D00681DC7 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +59,11 @@
 				000421FF281FE45400681DC7 /* Views */,
 				00042200281FE46100681DC7 /* ViewModels */,
 				000421EF281FCA6F00681DC7 /* Hawaii_surf_schoolApp.swift */,
-				000421F1281FCA6F00681DC7 /* ContentView.swift */,
+				000421F1281FCA6F00681DC7 /* SpotView.swift */,
+				0004220128200B7D00681DC7 /* Hossegor.swift */,
+				000422032820129D00681DC7 /* MapView.swift */,
 				000421F3281FCA7100681DC7 /* Assets.xcassets */,
 				000421F5281FCA7100681DC7 /* Preview Content */,
-				0004220128200B7D00681DC7 /* Hossegor.swift */,
 			);
 			path = Hawaii_surf_school;
 			sourceTree = "<group>";
@@ -164,7 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000421F2281FCA6F00681DC7 /* ContentView.swift in Sources */,
+				000421F2281FCA6F00681DC7 /* SpotView.swift in Sources */,
+				000422042820129D00681DC7 /* MapView.swift in Sources */,
 				0004220228200B7D00681DC7 /* Hossegor.swift in Sources */,
 				000421F0281FCA6F00681DC7 /* Hawaii_surf_schoolApp.swift in Sources */,
 			);

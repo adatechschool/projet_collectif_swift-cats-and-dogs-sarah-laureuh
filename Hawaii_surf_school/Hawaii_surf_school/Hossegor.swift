@@ -14,10 +14,8 @@ struct Hossegor: View {
             .scaledToFill()
             .frame(width: 300.0, height: 150.0)
             .clipShape(Rectangle())
-            .overlay {
-                Rectangle().stroke(.gray, lineWidth: 4)
-            }
             .shadow(radius: 7)
+            .cornerRadius(10)
             
     }
 }
