@@ -9,13 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(alignment: .leading) {
+            Text("Hawaii Surf School")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(Color.green)
+                .multilineTextAlignment(.center)
+                .padding(-3.0)
+            HStack {
+                Text("Best spots around the globe")
+                    .font(.subheadline)
+                Spacer()
+                Text("Yo")
+            }
+        }
+        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+        }
     }
 }
