@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct Hossegor: View {
+struct RectangleImage: View {
+    var image: Image
     var body: some View {
-        Image("alex-going-surfing-biarritz-lighthouse-anglet-morning-mist")
+        image
             .resizable()
             .scaledToFill()
             .frame(width: 300.0, height: 150.0)
@@ -20,8 +21,8 @@ struct Hossegor: View {
     }
 }
 
-struct Hossegor_Previews: PreviewProvider {
+struct RectangleImage_Previews: PreviewProvider {
     static var previews: some View {
-        Hossegor()
+        RectangleImage(image: Image("Point_Break"))
     }
 }

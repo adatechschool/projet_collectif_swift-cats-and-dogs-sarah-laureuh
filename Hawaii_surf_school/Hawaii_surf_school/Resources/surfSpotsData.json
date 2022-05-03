@@ -1,7 +1,8 @@
 [
     {
+        "id": 0,
         "Surf_Break": "Reef Break",
-        "Photos": "<https://dl.airtable.com/ZuXJZ2NnTF40kCdBfTld_thomas-ashlock-64485-unsplash.jpg>",
+        "Photos": "Reef_Break",
         "Address": "Pipeline, Oahu, Hawaii",
         "coordinates": {
             "longitude": -157.858093,
@@ -10,8 +11,9 @@
     },
 
     {
+        "id": 1,
         "Surf_Break": "Point Break",
-        "Photos": "<https://dl.airtable.com/e3QoP3cFSyykZJOvWGIy_cesar-couto-477018-unsplash%20(1).jpg>",
+        "Photos": "Point_Break",
         "Address": "Supertubes, Jeffreys Bay, South Africa",
         "coordinates": {
             "longitude": -157.858093,

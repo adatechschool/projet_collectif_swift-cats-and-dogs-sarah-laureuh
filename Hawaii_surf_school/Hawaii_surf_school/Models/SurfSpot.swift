@@ -9,14 +9,15 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-struct SurfSpot: Hashable, Codable {
+struct SurfSpot: Hashable, Codable, Identifiable {
+    var id: Int
     var Surf_Break: String
     var Address: String
     
-//    private var Photos: String
-//        var image: Image {
-//            Image(Photos)
-//        }
+    private var Photos: String
+        var image: Image {
+            Image(Photos)
+        }
     
     private var coordinates: Coordinates
     
