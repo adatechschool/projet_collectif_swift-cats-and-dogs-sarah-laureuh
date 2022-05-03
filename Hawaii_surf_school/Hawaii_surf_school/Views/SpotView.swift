@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct SpotView: View {
     var body: some View {
         VStack {
@@ -22,7 +23,7 @@ struct SpotView: View {
                 Text("Hossegor")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .foregroundColor(Color.green)
+                    .foregroundColor(Color.blue)
                     .multilineTextAlignment(.center)
                     .padding(-3.0)
                 HStack {

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "ZuXJZ2NnTF40kCdBfTld_thomas-ashlock-64485-unsplash.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
