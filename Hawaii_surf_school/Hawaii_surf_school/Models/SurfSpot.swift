@@ -13,6 +13,7 @@ struct SurfSpot: Hashable, Codable, Identifiable {
     var id: Int
     var Surf_Break: String
     var Address: String
+    var isFavorite: Bool
     
     private var Photos: String
         var image: Image {

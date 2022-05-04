@@ -7,7 +7,9 @@
         "coordinates": {
             "longitude": -157.858093,
             "latitude": 21.315603
-        }
+        },
+        "isFavorite": true
+        
     },
 
     {
@@ -18,7 +20,8 @@
         "coordinates": {
             "longitude": -157.858093,
             "latitude": 21.315603
-        }
+        },
+        "isFavorite": false
     }
 ]
 

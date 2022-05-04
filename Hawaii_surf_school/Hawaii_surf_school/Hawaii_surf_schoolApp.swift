@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Hawaii_surf_schoolApp: App {
+    @StateObject private var modelSurfSpotsData = ModelSurfSpotsData()
+    
     var body: some Scene {
         WindowGroup {
             SpotView()
+                .environmentObject(modelSurfSpotsData)
         }
     }
 }

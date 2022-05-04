@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import Combine
 
-var surfSpots: [SurfSpot] = load("surfSpotsData.json")
+final class ModelSurfSpotsData: ObservableObject {
+    
+    @Published var surfSpots: [SurfSpot] = load("surfSpotsData.json")
+}
 
 
 func load<T: Decodable>(_ filename: String) -> T {

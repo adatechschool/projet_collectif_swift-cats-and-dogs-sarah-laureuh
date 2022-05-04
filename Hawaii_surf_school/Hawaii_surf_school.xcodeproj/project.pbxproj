@@ -17,6 +17,7 @@
 		00822DE8282156D900B7EAC6 /* Point_Break.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 00822DE6282156D900B7EAC6 /* Point_Break.jpeg */; };
 		00822DEA2821594A00B7EAC6 /* SurfSpotList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00822DE92821594A00B7EAC6 /* SurfSpotList.swift */; };
 		00822DEC28215C0800B7EAC6 /* SurfSpotDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00822DEB28215C0800B7EAC6 /* SurfSpotDetail.swift */; };
+		00822DEE2822C6F900B7EAC6 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00822DED2822C6F900B7EAC6 /* FavoriteButton.swift */; };
 		00B0505E28211955007FA754 /* SurfSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0505D28211955007FA754 /* SurfSpot.swift */; };
 		00B0506028212093007FA754 /* ModelSurfSpotsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0505F28212093007FA754 /* ModelSurfSpotsData.swift */; };
 		00B05064282132D6007FA754 /* surfSpotsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 00B05063282132D6007FA754 /* surfSpotsData.json */; };
@@ -35,6 +36,7 @@
 		00822DE6282156D900B7EAC6 /* Point_Break.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Point_Break.jpeg; sourceTree = "<group>"; };
 		00822DE92821594A00B7EAC6 /* SurfSpotList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfSpotList.swift; sourceTree = "<group>"; };
 		00822DEB28215C0800B7EAC6 /* SurfSpotDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfSpotDetail.swift; sourceTree = "<group>"; };
+		00822DED2822C6F900B7EAC6 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		00B0505D28211955007FA754 /* SurfSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfSpot.swift; sourceTree = "<group>"; };
 		00B0505F28212093007FA754 /* ModelSurfSpotsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSurfSpotsData.swift; sourceTree = "<group>"; };
 		00B05063282132D6007FA754 /* surfSpotsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = surfSpotsData.json; sourceTree = "<group>"; };
@@ -102,8 +104,7 @@
 		000421FF281FE45400681DC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0004220128200B7D00681DC7 /* RectangleImage.swift */,
-				000422032820129D00681DC7 /* MapView.swift */,
+				00822DEF2822C7BD00B7EAC6 /* Helpers */,
 				000421F1281FCA6F00681DC7 /* SpotView.swift */,
 				00B05065282133EF007FA754 /* SurfSpotRow.swift */,
 				00822DE92821594A00B7EAC6 /* SurfSpotList.swift */,
@@ -126,6 +127,16 @@
 				00822DE5282156D900B7EAC6 /* Reef_Break.jpeg */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		00822DEF2822C7BD00B7EAC6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				000422032820129D00681DC7 /* MapView.swift */,
+				00822DED2822C6F900B7EAC6 /* FavoriteButton.swift */,
+				0004220128200B7D00681DC7 /* RectangleImage.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		00B0505A282117DB007FA754 /* Resources */ = {
@@ -213,6 +224,7 @@
 				000421F2281FCA6F00681DC7 /* SpotView.swift in Sources */,
 				00B0506028212093007FA754 /* ModelSurfSpotsData.swift in Sources */,
 				000422042820129D00681DC7 /* MapView.swift in Sources */,
+				00822DEE2822C6F900B7EAC6 /* FavoriteButton.swift in Sources */,
 				0004220228200B7D00681DC7 /* RectangleImage.swift in Sources */,
 				00822DEC28215C0800B7EAC6 /* SurfSpotDetail.swift in Sources */,
 				000421F0281FCA6F00681DC7 /* Hawaii_surf_schoolApp.swift in Sources */,

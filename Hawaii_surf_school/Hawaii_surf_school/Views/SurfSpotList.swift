@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct SurfSpotList: View {
+    @EnvironmentObject var ModelSurfSpotsData: ModelSurfSpotsData
+    @State private var showFavoritesOnly =  false
+    
+    var filteredSurfSpots: [SurfSpot] {
+        ModelSurfSpotsData.surfSpots.filter { surfSpot in
+                (!showFavoritesOnly || surfSpot.isFavorite)
+            }
+        }
+    
     var body: some View {
         NavigationView {
-            List(surfSpots) { surfSpot in
-                NavigationLink {
-                    SurfSpotDetail(surfSpot: surfSpot)
-                } label: {
-                    SurfSpotRow(surfSpot: surfSpot)
+            List {
+                Toggle(isOn: $showFavoritesOnly) {
+                    Text("Favorites only")
+                }
+                
+                ForEach(filteredSurfSpots) { surfSpot in
+                    NavigationLink {
+                        SurfSpotDetail(surfSpot: surfSpot)
+                    } label: {
+                        SurfSpotRow(surfSpot: surfSpot)
+                    }
                 }
             }
             .navigationTitle("Surf Spots de fifou")
@@ -28,7 +43,9 @@ struct SurfSpotList_Previews: PreviewProvider {
                     SurfSpotList()
                         .previewDevice(PreviewDevice(rawValue: deviceName))
                         .previewDisplayName(deviceName)
+                        .environmentObject(ModelSurfSpotsData())
                 }
+        
 
     }
 }

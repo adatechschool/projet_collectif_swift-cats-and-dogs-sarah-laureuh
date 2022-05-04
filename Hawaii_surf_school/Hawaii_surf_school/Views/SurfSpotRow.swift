@@ -20,11 +20,17 @@ struct SurfSpotRow: View {
             Text(surfSpot.Surf_Break)
             
             Spacer()
+            
+            if surfSpot.isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                }
         }
     }
 }
 
 struct SurfSpotRow_Previews: PreviewProvider {
+    static var surfSpots = ModelSurfSpotsData().surfSpots
     static var previews: some View {
         Group {
             SurfSpotRow(surfSpot: surfSpots[0])

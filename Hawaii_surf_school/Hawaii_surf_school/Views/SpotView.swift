@@ -18,6 +18,7 @@ struct SpotView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SpotView()
+                .environmentObject(ModelSurfSpotsData())
         }
     }
 }

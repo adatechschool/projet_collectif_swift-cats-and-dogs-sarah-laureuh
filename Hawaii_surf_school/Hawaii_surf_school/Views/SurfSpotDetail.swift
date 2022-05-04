@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct SurfSpotDetail: View {
+    @EnvironmentObject var ModelSurfSpotsData: ModelSurfSpotsData
     var surfSpot: SurfSpot
+    
+    var surfSpotIndex: Int {
+            ModelSurfSpotsData.surfSpots.firstIndex(where: { $0.id == surfSpot.id })!
+    }
     
     var body: some View {
         ScrollView {
@@ -21,12 +26,15 @@ struct SurfSpotDetail: View {
                 .padding(.bottom, -100)
             
             VStack(alignment: .leading) {
-                Text(surfSpot.Surf_Break)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.blue)
-                    .multilineTextAlignment(.center)
-                    .padding(-3.0)
+                HStack {
+                    Text(surfSpot.Surf_Break)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.blue)
+                        .multilineTextAlignment(.center)
+                        .padding(-3.0)
+                    FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
+                }
                 HStack {
                     Text(surfSpot.Address)
                         .font(.subheadline)
@@ -51,8 +59,11 @@ struct SurfSpotDetail: View {
 }
 
 struct SurfSpotDetail_Previews: PreviewProvider {
+    static let modelSurfSpotsData = ModelSurfSpotsData()
+    
     static var previews: some View {
-        SurfSpotDetail(surfSpot: surfSpots[0])
+        SurfSpotDetail(surfSpot: ModelSurfSpotsData().surfSpots[0])
+            .environmentObject(modelSurfSpotsData)
     }
 }
 
