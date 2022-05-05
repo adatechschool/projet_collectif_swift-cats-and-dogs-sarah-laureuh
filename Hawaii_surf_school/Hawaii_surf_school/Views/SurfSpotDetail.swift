@@ -9,11 +9,14 @@ import SwiftUI
 
 struct SurfSpotDetail: View {
     @EnvironmentObject var ModelSurfSpotsData: ModelSurfSpotsData
+    var records: Records
+    var fields: Fields
     var surfSpot: SurfSpot
+
     
-    var surfSpotIndex: Int {
-            ModelSurfSpotsData.surfSpots.firstIndex(where: { $0.id == surfSpot.id })!
-    }
+//    var surfSpotIndex: Int {
+//            ModelSurfSpotsData.surfSpots.firstIndex(where: { $0.id == surfSpot.id })!
+//    }
     
     var body: some View {
         ScrollView {
@@ -33,7 +36,7 @@ struct SurfSpotDetail: View {
                         .foregroundColor(Color.blue)
                         .multilineTextAlignment(.center)
                         .padding(-3.0)
-                    FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
+//                    FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
                 }
                 HStack {
                     Text(surfSpot.Address)

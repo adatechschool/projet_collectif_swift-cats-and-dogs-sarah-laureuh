@@ -10,8 +10,13 @@ import Combine
 
 final class ModelSurfSpotsData: ObservableObject {
     
-    @Published var surfSpots: [SurfSpot] = load("surfSpotsData.json")
+    @Published var surfSpots: [Records] = load("surfSpotsData.json")
+    //@Published var records: [SurfSpot] = surfSpots[0]
 }
+
+//func value(forKeyPath keyPath: String) -> Any? {
+//    return
+//}
 
 
 func load<T: Decodable>(_ filename: String) -> T {
