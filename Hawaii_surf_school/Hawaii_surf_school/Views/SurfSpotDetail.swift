@@ -9,8 +9,6 @@ import SwiftUI
 
 struct SurfSpotDetail: View {
     @EnvironmentObject var ModelSurfSpotsData: ModelSurfSpotsData
-    var records: Records
-    var fields: Fields
     var surfSpot: SurfSpot
 
     
