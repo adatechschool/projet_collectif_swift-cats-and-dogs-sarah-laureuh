@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-struct SurfSpot: Hashable, Codable {
-    //var id: Int
+struct SurfSpot: Hashable, Codable, Identifiable {
+    var id: Int
     var Surf_Break: String
     var Address: String
     var isFavorite: Bool
