@@ -16,7 +16,6 @@ struct SurfSpot: Codable {
     let records: [Record]
     let offset: String
 }
-
 // MARK: - Record
 struct Record: Codable {
     let id: String
@@ -47,6 +46,20 @@ struct Fields: Codable {
         case peakSurfSeasonEnds = "Peak Surf Season Ends"
         case address = "Address"
     }
+
+}
+
+// MARK: - Photo
+struct Photo: Codable {
+    let id, url, filename: String
+    let size: Int
+    let type: String
+    let thumbnails: Thumbnails
+}
+
+// MARK: - Thumbnails
+struct Thumbnails: Codable {
+    let small, large, full: Full
 }
 
 // MARK: - Photo
