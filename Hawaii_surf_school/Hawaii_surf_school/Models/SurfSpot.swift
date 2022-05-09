@@ -18,7 +18,7 @@ struct SurfSpot: Codable {
     let offset: String
 }
 // MARK: - Record
-struct Record: Codable {
+struct Record: Codable, Identifiable {
     let id: String
     let fields: Fields
     let createdTime: String
@@ -32,6 +32,7 @@ struct Fields: Codable {
     let magicSeaweedLink: String
     let photos: [Photo]
     let peakSurfSeasonBegins, destinationStateCountry, peakSurfSeasonEnds, address: String
+    let isFavorite: Bool
     
     enum CodingKeys: String, CodingKey {
         case surfBreak = "Surf Break"
@@ -45,6 +46,7 @@ struct Fields: Codable {
         case destinationStateCountry = "Destination State/Country"
         case peakSurfSeasonEnds = "Peak Surf Season Ends"
         case address = "Address"
+        case isFavorite = "isFavorite"
     }
 }
 

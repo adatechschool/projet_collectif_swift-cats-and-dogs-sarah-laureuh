@@ -43,7 +43,8 @@
                 "Peak Surf Season Begins": "2018-07-22",
                 "Destination State/Country": "Oahu, Hawaii",
                 "Peak Surf Season Ends": "2018-08-31",
-                "Address": "Pipeline, Oahu, Hawaii"
+                "Address": "Pipeline, Oahu, Hawaii",
+                "isFavorite": true
             },
             "createdTime": "2018-05-31T00:16:16.000Z"
         },
@@ -90,7 +91,8 @@
                 "Peak Surf Season Begins": "2018-09-01",
                 "Destination State/Country": "Namibia ",
                 "Peak Surf Season Ends": "2018-11-30",
-                "Address": "Skeleton Bay, Namibia "
+                "Address": "Skeleton Bay, Namibia ",
+                "isFavorite": true
             },
             "createdTime": "2018-05-31T00:16:16.000Z"
         },
@@ -136,7 +138,8 @@
                 "Peak Surf Season Begins": "2018-11-28",
                 "Destination State/Country": "Gold Coast, Australia",
                 "Peak Surf Season Ends": "2019-02-01",
-                "Address": "Superbank, Gold Coast, Australia"
+                "Address": "Superbank, Gold Coast, Australia",
+                "isFavorite": true
             },
             "createdTime": "2018-05-31T00:16:16.000Z"
         }
