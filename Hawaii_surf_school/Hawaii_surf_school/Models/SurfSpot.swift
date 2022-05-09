@@ -11,7 +11,6 @@
 
 import Foundation
 
-
 // MARK: - SurfSpot
 struct SurfSpot: Codable {
     let records: [Record]
@@ -23,6 +22,7 @@ struct Record: Codable, Identifiable {
     let fields: Fields
     let createdTime: String
 }
+
 // MARK: - Fields
 struct Fields: Codable {
     let surfBreak: [String]
@@ -33,7 +33,7 @@ struct Fields: Codable {
     let photos: [Photo]
     let peakSurfSeasonBegins, destinationStateCountry, peakSurfSeasonEnds, address: String
     let isFavorite: Bool
-    
+
     enum CodingKeys: String, CodingKey {
         case surfBreak = "Surf Break"
         case difficultyLevel = "Difficulty Level"
@@ -48,6 +48,19 @@ struct Fields: Codable {
         case address = "Address"
         case isFavorite = "isFavorite"
     }
+
+}
+
+// MARK: - Photo
+struct Photo: Codable {
+    let id, url, filename: String
+    let size: Int
+    let type: String
+    let thumbnails: Thumbnails
+    
+// MARK: - Thumbnails
+struct Thumbnails: Codable {
+    let small, large, full: Full
 }
 
 // MARK: - Photo

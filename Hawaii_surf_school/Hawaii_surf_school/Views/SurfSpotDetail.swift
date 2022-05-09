@@ -14,6 +14,7 @@ struct SurfSpotDetail: View {
     
     var surfSpotIndex: Int {
         ModelSurfSpotsData.surfSpots.records.firstIndex(where: { $0.id == surfSpot.id })!
+
     }
     
     var body: some View {
@@ -34,7 +35,7 @@ struct SurfSpotDetail: View {
                         .foregroundColor(Color.blue)
                         .multilineTextAlignment(.center)
                         .padding(-3.0)
-//                    FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
+                    FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
                 }
                 HStack {
                     Text(surfSpot.fields.address)
