@@ -55,8 +55,7 @@ struct Photo: Codable {
     let size: Int
     let type: String
     let thumbnails: Thumbnails
-}
-
+    
 // MARK: - Thumbnails
 struct Thumbnails: Codable {
     let small, large, full: Full
