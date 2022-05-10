@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 
 struct SurfSpotDetail: View {
@@ -21,47 +22,60 @@ struct SurfSpotDetail: View {
     
     var body: some View {
         ScrollView {
-//            MapView(coordinate: surfSpot.fields.geocode.o)
-//                .ignoresSafeArea(edges: .top)
-//                .frame(height: 300)
-            
-            AsyncImage(url: URL(string: surfSpot.fields.photos[0].thumbnails.large.url))
-            
-            Text(surfSpot.fields.photos[0].thumbnails.large.url)
-            
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(surfSpot.fields.surfBreak[0])
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.blue)
-                        .multilineTextAlignment(.center)
-                        .padding(-3.0)
-//                    FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
-                }
-                HStack {
-                    Text(surfSpot.fields.address)
-                        .font(.subheadline)
-                    Spacer()
-                    Text("")
-                    
-                }
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                Divider()
+            VStack{
+                
+                MapView(coordinate: CLLocationCoordinate2D(latitude: surfSpot.fields.geocode.o.lat, longitude: surfSpot.fields.geocode.o.lng))
+                            .ignoresSafeArea(edges: .top)
+                            .frame(height: 300)
+                
+                AsyncImage(url: URL(string: surfSpot.fields.photos[0].thumbnails.large.url)) { image in
+                    image
+                            .resizable()
+                            .scaledToFill()
+                            .clipShape(Rectangle())
+                            .shadow(radius: 7)
+                            .cornerRadius(10)
+                        } placeholder: {
+                        ProgressView()
+                        }
+                .frame(width: 300, height: 150)
+                
+                
+                
+                
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(surfSpot.fields.surfBreak[0])
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.blue)
+                            .multilineTextAlignment(.center)
+                            .padding(-3.0)
+    //                    FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
+                    }
+                    HStack {
+                        Text(surfSpot.fields.address)
+                            .font(.subheadline)
+                        Spacer()
+                        Text("hello world")
+                        
+                    }
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    Divider()
 
-                Text("")
-                      .font(.title2)
-                Text("Descriptive text goes here.")
+                    Text("")
+                          .font(.title2)
+                    Text("Descriptive text goes here.")
+                }
+                .padding()
+                Spacer()
             }
-            .padding()
-            Spacer()
+            .navigationTitle(surfSpot.fields.surfBreak[0])
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle(surfSpot.fields.surfBreak[0])
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
-
 struct SurfSpotDetail_Previews: PreviewProvider {
     static let modelSurfSpotsData = ModelSurfSpotsData()
     

@@ -8,7 +8,7 @@
                 ],
                 "Difficulty Level": 4,
                 "Destination": "Pipeline",
-                "Geocode": "🔵 eyJpIjoiUGlwZWxpbmUsIE9haHUsIEhhd2FpaSIsIm8iOnsic3RhdHVzIjoiT0siLCJmb3JtYXR0ZWRBZGRyZXNzIjoiRWh1a2FpIEJlYWNoIFBhcmssIEhhbGVpd2EsIEhJIDk2NzEyLCBVbml...",
+                "Geocode": " eyJpIjoiUGlwZWxpbmUsIE9haHUsIEhhd2FpaSIsIm8iOnsic3RhdHVzIjoiT0siLCJmb3JtYXR0ZWRBZGRyZXNzIjoiRWh1a2FpIEJlYWNoIFBhcmssIEhhbGVpd2EsIEhJIDk2NzEyLCBVbml...",
                 "Influencers": [
                     "recD1zp1pQYc8O7l2",
                     "rec1ptbRPxhS8rRun"
@@ -33,7 +33,7 @@
                                 "height": 512
                             },
                             "full": {
-                                "url": "<https://dl.airtable.com/psynuQNmSvOTe3BWa0Fw_full_thomas-ashlock-64485-unsplash.jpg>",
+                                "url": "https://dl.airtable.com/psynuQNmSvOTe3BWa0Fw_full_thomas-ashlock-64485-unsplash.jpg",
                                 "width": 2233,
                                 "height": 1536
                             }
@@ -56,7 +56,7 @@
                 ],
                 "Difficulty Level": 5,
                 "Destination": "Skeleton Bay",
-                "Geocode": "🔵 eyJpIjoiU2tlbGV0b24gQmF5LCBOYW1pYmlhIiwibyI6eyJzdGF0dXMiOiJPSyIsImZvcm1hdHRlZEFkZHJlc3MiOiJOYW1pYmlhIiwibGF0IjotMjUuOTE0NDkxOSwibG5nIjoxNC45MDY4NTk...",
+                "Geocode": " eyJpIjoiU2tlbGV0b24gQmF5LCBOYW1pYmlhIiwibyI6eyJzdGF0dXMiOiJPSyIsImZvcm1hdHRlZEFkZHJlc3MiOiJOYW1pYmlhIiwibGF0IjotMjUuOTE0NDkxOSwibG5nIjoxNC45MDY4NTk...",
                 "Influencers": [
                     "recD1zp1pQYc8O7l2",
                     "rec1ptbRPxhS8rRun"
@@ -65,23 +65,23 @@
                 "Photos": [
                     {
                         "id": "attKinKKZvgdS5A5U",
-                        "url": "<https://dl.airtable.com/YzqA020RRLaTyAZAta9g_brandon-compagne-308937-unsplash.jpg>",
+                        "url": "https://dl.airtable.com/YzqA020RRLaTyAZAta9g_brandon-compagne-308937-unsplash.jpg",
                         "filename": "brandon-compagne-308937-unsplash.jpg",
                         "size": 1494974,
                         "type": "image/jpeg",
                         "thumbnails": {
                             "small": {
-                                "url": "<https://dl.airtable.com/Y8970kyrQHWfL6AMkxZQ_small_brandon-compagne-308937-unsplash.jpg>",
+                                "url": "https://dl.airtable.com/Y8970kyrQHWfL6AMkxZQ_small_brandon-compagne-308937-unsplash.jpg",
                                 "width": 54,
                                 "height": 36
                             },
                             "large": {
-                                "url": "<https://dl.airtable.com/dkQKXoUnTGiofIvg5TJR_large_brandon-compagne-308937-unsplash.jpg>",
+                                "url": "https://dl.airtable.com/dkQKXoUnTGiofIvg5TJR_large_brandon-compagne-308937-unsplash.jpg",
                                 "width": 768,
                                 "height": 512
                             },
                             "full": {
-                                "url": "<https://dl.airtable.com/pexuxaQ6D2VV61pyhUwn_full_brandon-compagne-308937-unsplash.jpg>",
+                                "url": "https://dl.airtable.com/pexuxaQ6D2VV61pyhUwn_full_brandon-compagne-308937-unsplash.jpg",
                                 "width": 3000,
                                 "height": 2000
                             }
@@ -104,7 +104,7 @@
                 ],
                 "Difficulty Level": 4,
                 "Destination": "Superbank",
-                "Geocode": "🔵 eyJpIjoiU3VwZXJiYW5rLCBHb2xkIENvYXN0LCBBdXN0cmFsaWEiLCJvIjp7InN0YXR1cyI6Ik9LIiwiZm9ybWF0dGVkQWRkcmVzcyI6IlNuYXBwZXIgUm9ja3MgUmQsIENvb2xhbmdhdHRhIFF...",
+                "Geocode": " eyJpIjoiU3VwZXJiYW5rLCBHb2xkIENvYXN0LCBBdXN0cmFsaWEiLCJvIjp7InN0YXR1cyI6Ik9LIiwiZm9ybWF0dGVkQWRkcmVzcyI6IlNuYXBwZXIgUm9ja3MgUmQsIENvb2xhbmdhdHRhIFF...",
                 "Influencers": [
                     "recSkJ4HuvzAUBrdd"
                 ],
@@ -112,7 +112,7 @@
                 "Photos": [
                     {
                         "id": "attmtbEOAQteRjz2p",
-                        "url": "<https://dl.airtable.com/I4E4xZeQbO2g814udQDm_jeremy-bishop-80371-unsplash.jpg>",
+                        "url": "https://dl.airtable.com/I4E4xZeQbO2g814udQDm_jeremy-bishop-80371-unsplash.jpg",
                         "filename": "jeremy-bishop-80371-unsplash.jpg",
                         "size": 1524876,
                         "type": "image/jpeg",
@@ -123,7 +123,7 @@
                                 "height": 36
                             },
                             "large": {
-                                "url": "<https://dl.airtable.com/aBnINo8qQqDvER2f2wGg_large_jeremy-bishop-80371-unsplash.jpg>",
+                                "url": "https://dl.airtable.com/aBnINo8qQqDvER2f2wGg_large_jeremy-bishop-80371-unsplash.jpg",
                                 "width": 683,
                                 "height": 512
                             },
