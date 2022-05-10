@@ -27,6 +27,8 @@ struct SurfSpotDetail: View {
             
             AsyncImage(url: URL(string: surfSpot.fields.photos[0].thumbnails.large.url))
             
+            Text(surfSpot.fields.photos[0].thumbnails.large.url)
+            
             VStack(alignment: .leading) {
                 HStack {
                     Text(surfSpot.fields.surfBreak[0])
@@ -66,6 +68,7 @@ struct SurfSpotDetail_Previews: PreviewProvider {
     static var previews: some View {
         SurfSpotDetail(surfSpot: ModelSurfSpotsData().surfSpots.records[0])
             .environmentObject(modelSurfSpotsData)
+        
     }
 }
 

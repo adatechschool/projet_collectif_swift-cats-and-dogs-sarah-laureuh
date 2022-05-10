@@ -28,7 +28,7 @@ struct Fields: Codable {
     let surfBreak: [String]
     let difficultyLevel: Int
     let destination: String
-    let geocode: Geocode
+    //let geocode: Geocode
     let influencers: [String]
     let magicSeaweedLink: String
     let photos: [Photo]
@@ -39,7 +39,7 @@ struct Fields: Codable {
         case surfBreak = "Surf Break"
         case difficultyLevel = "Difficulty Level"
         case destination = "Destination"
-        case geocode = "Geocode"
+        //case geocode = "Geocode"
         case influencers = "Influencers"
         case magicSeaweedLink = "Magic Seaweed Link"
         case photos = "Photos"
@@ -53,18 +53,18 @@ struct Fields: Codable {
 }
 
 
-// MARK: - Geocode
-struct Geocode: Codable {
-    let i: String
-    let o: O
-    let e: Int
-}
-
-// MARK: - O
-struct O: Codable {
-    let status, formattedAddress: String
-    let lat, lng: Double
-}
+//// MARK: - Geocode
+//struct Geocode: Codable {
+//    let i: String
+//    let o: O
+//    let e: Int
+//}
+//
+//// MARK: - O
+//struct O: Codable {
+//    let status, formattedAddress: String
+//    let lat, lng: Double
+//}
 
 
 // MARK: - Photo

@@ -23,12 +23,12 @@
                         "type": "image/jpeg",
                         "thumbnails": {
                             "small": {
-                                "url": "<https://dl.airtable.com/yfKxR9ZQqiT7drKxpjdF_small_thomas-ashlock-64485-unsplash.jpg>",
+                                "url": "https://dl.airtable.com/yfKxR9ZQqiT7drKxpjdF_small_thomas-ashlock-64485-unsplash.jpg",
                                 "width": 52,
                                 "height": 36
                             },
                             "large": {
-                                "url": "<https://dl.airtable.com/cFfMuU8NQjaEskeC3B2h_large_thomas-ashlock-64485-unsplash.jpg>",
+                                "url": "https://dl.airtable.com/cFfMuU8NQjaEskeC3B2h_large_thomas-ashlock-64485-unsplash.jpg",
                                 "width": 744,
                                 "height": 512
                             },

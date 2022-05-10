@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SurfSpotRow: View {
     
-    var surfSpot: Fields
+    var surfSpot: Record
     
     var body: some View {
         HStack {
@@ -17,11 +17,11 @@ struct SurfSpotRow: View {
                 //.resizable()
                 //.frame(width: 50, height: 50)
             
-            Text(surfSpot.surfBreak[0])
+            Text(surfSpot.fields.surfBreak[0])
             
             Spacer()
             
-            if surfSpot.isFavorite {
+            if surfSpot.fields.isFavorite {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
                 }
@@ -33,8 +33,8 @@ struct SurfSpotRow_Previews: PreviewProvider {
     static var surfSpots = ModelSurfSpotsData().surfSpots
     static var previews: some View {
         Group {
-            SurfSpotRow(surfSpot: surfSpots.records[0].fields)
-            SurfSpotRow(surfSpot: surfSpots.records[1].fields)
+            SurfSpotRow(surfSpot: surfSpots.records[0])
+            SurfSpotRow(surfSpot: surfSpots.records[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
 

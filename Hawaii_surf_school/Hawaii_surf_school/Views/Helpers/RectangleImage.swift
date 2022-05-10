@@ -13,7 +13,7 @@ struct RectangleImage: View {
     var body: some View {
         
         AsyncImage(url: URL(string: surfSpot.fields.photos[0].thumbnails.small.url))
-
+             
 //        image
 //            .resizable()
 //            .scaledToFill()
