@@ -10,11 +10,8 @@ import Combine
 
 final class ModelSurfSpotsData: ObservableObject {
     
-<<<<<<< HEAD
     @Published var surfSpots: SurfSpot = load("surfSpotsData.json")
-=======
-    @Published var surfSpots: [SurfSpot] = load("surfSpotsData.json")
->>>>>>> f6436b3459b5a1fbc0dbdbcc48695a009568bbf1
+
 }
 
 

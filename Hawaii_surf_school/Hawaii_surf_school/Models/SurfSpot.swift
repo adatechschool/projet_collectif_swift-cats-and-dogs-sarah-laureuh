@@ -27,7 +27,8 @@ struct Record: Codable, Identifiable {
 struct Fields: Codable {
     let surfBreak: [String]
     let difficultyLevel: Int
-    let destination, geocode: String
+    let destination: String
+    let geocode: Geocode
     let influencers: [String]
     let magicSeaweedLink: String
     let photos: [Photo]
@@ -51,6 +52,21 @@ struct Fields: Codable {
 
 }
 
+
+// MARK: - Geocode
+struct Geocode: Codable {
+    let i: String
+    let o: O
+    let e: Int
+}
+
+// MARK: - O
+struct O: Codable {
+    let status, formattedAddress: String
+    let lat, lng: Double
+}
+
+
 // MARK: - Photo
 struct Photo: Codable {
     let id, url, filename: String
@@ -63,18 +79,6 @@ struct Thumbnails: Codable {
     let small, large, full: Full
 }
 
-// MARK: - Photo
-struct Photo: Codable {
-    let id, url, filename: String
-    let size: Int
-    let type: String
-    let thumbnails: Thumbnails
-}
-
-// MARK: - Thumbnails
-struct Thumbnails: Codable {
-    let small, large, full: Full
-}
 
 // MARK: - Full
 struct Full: Codable {
@@ -82,3 +86,4 @@ struct Full: Codable {
     let width, height: Int
 }
 
+}

@@ -11,11 +11,28 @@ struct SurfSpotList: View {
     @EnvironmentObject var ModelSurfSpotsData: ModelSurfSpotsData
     @State private var showFavoritesOnly =  false
     
-    var filteredSurfSpots: [SurfSpot] {
-        ModelSurfSpotsData.surfSpots.filter { surfSpot in
-                (!showFavoritesOnly || surfSpot.isFavorite)
+    var filteredSurfSpots: [Record] {
+        ModelSurfSpotsData.surfSpots.records.filter { surfSpot in
+            (!showFavoritesOnly || surfSpot.fields.isFavorite)
             }
         }
+    
+//    struct LandmarkList: View {
+//        var body: some View {
+//            NavigationView {
+//                List(landmarks) { landmark in
+//                    NavigationLink {
+//                        LandmarkDetail(landmark: landmark)
+//                    } label: {
+//                        LandmarkRow(landmark: landmark)
+//                    }
+//                }
+//                .navigationTitle("Landmarks")
+//            }
+//        }
+//    }
+    
+    
     
     var body: some View {
         NavigationView {

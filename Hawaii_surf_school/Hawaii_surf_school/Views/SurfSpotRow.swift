@@ -13,18 +13,18 @@ struct SurfSpotRow: View {
     
     var body: some View {
         HStack {
-            surfSpot.photos
-                .resizable()
-                .frame(width: 50, height: 50)
+            //surfSpot.photos
+                //.resizable()
+                //.frame(width: 50, height: 50)
             
             Text(surfSpot.surfBreak[0])
             
             Spacer()
             
-//            if surfSpot.isFavorite {
-//                Image(systemName: "star.fill")
-//                    .foregroundColor(.yellow)
-//                }
+            if surfSpot.isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                }
         }
     }
 }

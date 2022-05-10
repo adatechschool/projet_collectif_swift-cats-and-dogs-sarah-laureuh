@@ -7,7 +7,9 @@
 
 import SwiftUI
 
+
 struct SurfSpotDetail: View {
+    
     @EnvironmentObject var ModelSurfSpotsData: ModelSurfSpotsData
     var surfSpot: Record
 
@@ -19,13 +21,11 @@ struct SurfSpotDetail: View {
     
     var body: some View {
         ScrollView {
-            MapView(coordinate: surfSpot.fields.geocode)
-                .ignoresSafeArea(edges: .top)
-                .frame(height: 300)
+//            MapView(coordinate: surfSpot.fields.geocode.o)
+//                .ignoresSafeArea(edges: .top)
+//                .frame(height: 300)
             
-            RectangleImage(image: surfSpot.fields.photos)
-                .offset(y: -100)
-                .padding(.bottom, -100)
+            AsyncImage(url: URL(string: surfSpot.fields.photos[0].thumbnails.large.url))
             
             VStack(alignment: .leading) {
                 HStack {
@@ -35,7 +35,7 @@ struct SurfSpotDetail: View {
                         .foregroundColor(Color.blue)
                         .multilineTextAlignment(.center)
                         .padding(-3.0)
-                    FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
+//                    FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
                 }
                 HStack {
                     Text(surfSpot.fields.address)
