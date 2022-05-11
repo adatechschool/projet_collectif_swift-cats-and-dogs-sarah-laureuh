@@ -28,7 +28,7 @@ struct Fields: Codable {
     let surfBreak: [String]
     let difficultyLevel: Int
     let destination: String
-    let geocode: Geocode
+    let geocode: String
     let influencers: [String]
     let magicSeaweedLink: String
     let photos: [Photo]
@@ -51,7 +51,6 @@ struct Fields: Codable {
     }
 
 }
-
 
 //// MARK: - Geocode
 //struct Geocode: Codable {

@@ -17,7 +17,7 @@ struct SurfSpotRow: View {
                 //.resizable()
                 //.frame(width: 50, height: 50)
             
-            Text(surfSpot.fields.surfBreak[0])
+            Text(surfSpot.fields.destination)
             
             Spacer()
             

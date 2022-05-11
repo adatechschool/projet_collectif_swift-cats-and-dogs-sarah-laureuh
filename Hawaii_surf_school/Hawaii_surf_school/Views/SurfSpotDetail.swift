@@ -24,10 +24,8 @@ struct SurfSpotDetail: View {
         ScrollView {
             VStack{
                 
-                MapView(coordinate: CLLocationCoordinate2D(latitude: surfSpot.fields.geocode.o.lat, longitude: surfSpot.fields.geocode.o.lng))
-                            .ignoresSafeArea(edges: .top)
-                            .frame(height: 300)
-                
+                MapView()
+
                 AsyncImage(url: URL(string: surfSpot.fields.photos[0].thumbnails.large.url)) { image in
                     image
                             .resizable()
@@ -35,17 +33,17 @@ struct SurfSpotDetail: View {
                             .clipShape(Rectangle())
                             .shadow(radius: 7)
                             .cornerRadius(10)
+                            .offset(y: -100)
+                            .padding(.bottom, -90)
                         } placeholder: {
                         ProgressView()
                         }
                 .frame(width: 300, height: 150)
                 
                 
-                
-                
                 VStack(alignment: .leading) {
                     HStack {
-                        Text(surfSpot.fields.surfBreak[0])
+                        Text(surfSpot.fields.destination)
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundColor(Color.blue)
@@ -53,6 +51,7 @@ struct SurfSpotDetail: View {
                             .padding(-3.0)
     //                    FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
                     }
+                    
                     HStack {
                         Text(surfSpot.fields.address)
                             .font(.subheadline)
@@ -60,8 +59,10 @@ struct SurfSpotDetail: View {
                         Text("hello world")
                         
                     }
+                    
                     .font(.subheadline)
                     .foregroundColor(.secondary)
+                    
                     Divider()
 
                     Text("")
@@ -76,6 +77,7 @@ struct SurfSpotDetail: View {
         }
     }
 }
+
 struct SurfSpotDetail_Previews: PreviewProvider {
     static let modelSurfSpotsData = ModelSurfSpotsData()
     

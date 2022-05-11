@@ -1,5 +1,5 @@
 //
-//  GeoCode.swift
+//  Geocode.swift
 //  Hawaii_surf_school
 //
 //  Created by gaubert baptiste on 5/10/22.
