@@ -29,10 +29,6 @@ struct SurfSpotRow: View {
             
             Spacer()
             
-            if surfSpot.fields.isFavorite {
-                Image(systemName: "star.fill")
-                    .foregroundColor(.yellow)
-                }
         }
     }
 }

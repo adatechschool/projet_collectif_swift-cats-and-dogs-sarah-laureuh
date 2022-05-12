@@ -20,10 +20,6 @@ struct SurfSpotList: View {
     var body: some View {
         NavigationView {
             List {
-                Toggle(isOn: $showFavoritesOnly) {
-                    Text("Favorites only")
-                }
-                
                 ForEach(filteredSurfSpots) { surfSpot in
                     NavigationLink {
                         SurfSpotDetail(surfSpot: surfSpot)

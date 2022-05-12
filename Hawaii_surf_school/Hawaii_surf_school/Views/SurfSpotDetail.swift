@@ -13,19 +13,6 @@ struct SurfSpotDetail: View {
     
     @EnvironmentObject var ModelSurfSpotsData: ModelSurfSpotsData
     var surfSpot: Record
-
-    
-    var surfSpotIndex: Int {
-        ModelSurfSpotsData.surfSpots.records.firstIndex(where: { $0.id == surfSpot.id })!
-    }
-    
-    var waves: Int {
-        surfSpot.fields.difficultyLevel
-    }
-    
-//    for i in 1...waves {
-//        return ("🌊")*i
-//    }
     
     var body: some View {
         ScrollView {
@@ -56,7 +43,6 @@ struct SurfSpotDetail: View {
                             .foregroundColor(Color.blue)
                             .multilineTextAlignment(.center)
                             .padding(-3.0)
-//                        FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
                     }
                     
                     HStack {
