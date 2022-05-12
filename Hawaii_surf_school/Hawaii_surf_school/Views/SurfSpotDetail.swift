@@ -65,11 +65,11 @@ struct SurfSpotDetail: View {
                           .fontWeight(.semibold)
                           .foregroundColor(Color.blue)
                     
-                    Text("Début : \(surfSpot.fields.peakSurfSeasonBegins)")
+                    Text("Début : \(surfSpot.fields.seasonStart)")
                         .font(.subheadline)
                         .foregroundColor(Color.green)
 
-                    Text("Fin : \(surfSpot.fields.peakSurfSeasonEnds)")
+                    Text("Fin : \(surfSpot.fields.seasonEnd)")
                         .font(.subheadline)
                         .padding(.bottom)
                         .foregroundColor(Color.red)
@@ -79,7 +79,7 @@ struct SurfSpotDetail: View {
                           .fontWeight(.semibold)
                           .foregroundColor(Color.blue)
                     
-                    Text("\(surfSpot.fields.magicSeaweedLink)")
+                    Text("\(surfSpot.fields.link)")
                         .font(.subheadline)
                         .foregroundColor(Color.blue)
             
