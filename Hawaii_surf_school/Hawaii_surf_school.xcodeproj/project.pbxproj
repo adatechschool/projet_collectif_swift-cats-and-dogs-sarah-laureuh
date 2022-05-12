@@ -22,6 +22,9 @@
 		00B0506028212093007FA754 /* ModelSurfSpotsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0505F28212093007FA754 /* ModelSurfSpotsData.swift */; };
 		00B05064282132D6007FA754 /* surfSpotsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 00B05063282132D6007FA754 /* surfSpotsData.json */; };
 		00B05066282133EF007FA754 /* SurfSpotRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B05065282133EF007FA754 /* SurfSpotRow.swift */; };
+		9595D6D5282AAF2300F4154A /* GeoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595D6D4282AAF2300F4154A /* GeoCode.swift */; };
+		9595D6D7282AB16D00F4154A /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595D6D6282AB16D00F4154A /* Base64.swift */; };
+		9595D6D9282BE47000F4154A /* worldMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9595D6D8282BE47000F4154A /* worldMap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		00B0505F28212093007FA754 /* ModelSurfSpotsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSurfSpotsData.swift; sourceTree = "<group>"; };
 		00B05063282132D6007FA754 /* surfSpotsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = surfSpotsData.json; sourceTree = "<group>"; };
 		00B05065282133EF007FA754 /* SurfSpotRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfSpotRow.swift; sourceTree = "<group>"; };
+		9595D6D4282AAF2300F4154A /* GeoCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCode.swift; sourceTree = "<group>"; };
+		9595D6D6282AB16D00F4154A /* Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
+		9595D6D8282BE47000F4154A /* worldMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = worldMap.png; path = Hawaii_surf_school/Assets.xcassets/worldMap.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,8 @@
 			children = (
 				00B0505D28211955007FA754 /* SurfSpot.swift */,
 				00B0505F28212093007FA754 /* ModelSurfSpotsData.swift */,
+				9595D6D4282AAF2300F4154A /* GeoCode.swift */,
+				9595D6D6282AB16D00F4154A /* Base64.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 		00822DE42821566A00B7EAC6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9595D6D8282BE47000F4154A /* worldMap.png */,
 				00822DE6282156D900B7EAC6 /* Point_Break.jpeg */,
 				00822DE5282156D900B7EAC6 /* Reef_Break.jpeg */,
 			);
@@ -211,6 +220,7 @@
 				000421F7281FCA7100681DC7 /* Preview Assets.xcassets in Resources */,
 				000421F4281FCA7100681DC7 /* Assets.xcassets in Resources */,
 				00B05064282132D6007FA754 /* surfSpotsData.json in Resources */,
+				9595D6D9282BE47000F4154A /* worldMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,12 +235,14 @@
 				00B0506028212093007FA754 /* ModelSurfSpotsData.swift in Sources */,
 				000422042820129D00681DC7 /* MapView.swift in Sources */,
 				00822DEE2822C6F900B7EAC6 /* FavoriteButton.swift in Sources */,
+				9595D6D7282AB16D00F4154A /* Base64.swift in Sources */,
 				0004220228200B7D00681DC7 /* RectangleImage.swift in Sources */,
 				00822DEC28215C0800B7EAC6 /* SurfSpotDetail.swift in Sources */,
 				000421F0281FCA6F00681DC7 /* Hawaii_surf_schoolApp.swift in Sources */,
 				00B05066282133EF007FA754 /* SurfSpotRow.swift in Sources */,
 				00B0505E28211955007FA754 /* SurfSpot.swift in Sources */,
 				00822DEA2821594A00B7EAC6 /* SurfSpotList.swift in Sources */,
+				9595D6D5282AAF2300F4154A /* GeoCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

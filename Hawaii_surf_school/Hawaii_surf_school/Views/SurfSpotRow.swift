@@ -9,19 +9,19 @@ import SwiftUI
 
 struct SurfSpotRow: View {
     
-    var surfSpot: SurfSpot
+    var surfSpot: Record
     
     var body: some View {
         HStack {
-            surfSpot.image
-                .resizable()
-                .frame(width: 50, height: 50)
+            //surfSpot.photos
+                //.resizable()
+                //.frame(width: 50, height: 50)
             
-            Text(surfSpot.Surf_Break)
+            Text(surfSpot.fields.destination)
             
             Spacer()
             
-            if surfSpot.isFavorite {
+            if surfSpot.fields.isFavorite {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
                 }
@@ -33,8 +33,8 @@ struct SurfSpotRow_Previews: PreviewProvider {
     static var surfSpots = ModelSurfSpotsData().surfSpots
     static var previews: some View {
         Group {
-            SurfSpotRow(surfSpot: surfSpots[0])
-            SurfSpotRow(surfSpot: surfSpots[1])
+            SurfSpotRow(surfSpot: surfSpots.records[0])
+            SurfSpotRow(surfSpot: surfSpots.records[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
 
