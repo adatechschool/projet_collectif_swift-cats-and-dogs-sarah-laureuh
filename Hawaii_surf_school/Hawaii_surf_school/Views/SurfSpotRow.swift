@@ -13,9 +13,18 @@ struct SurfSpotRow: View {
     
     var body: some View {
         HStack {
-            //surfSpot.photos
-                //.resizable()
-                //.frame(width: 50, height: 50)
+            AsyncImage(url: URL(string: surfSpot.fields.photos[0].thumbnails.large.url)) { image in
+                image
+                        .resizable()
+                        .clipShape(Rectangle())
+                        .shadow(radius: 7)
+                        .cornerRadius(10)
+                        //.offset(y: -100)
+                        //.padding(.bottom, -90)
+                    } placeholder: {
+                    ProgressView()
+                    }
+            .frame(width: 50, height: 50)
             
             Text(surfSpot.fields.destination)
             
