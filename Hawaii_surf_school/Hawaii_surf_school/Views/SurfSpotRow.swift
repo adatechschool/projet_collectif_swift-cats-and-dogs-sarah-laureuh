@@ -13,7 +13,7 @@ struct SurfSpotRow: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: surfSpot.fields.photos[0].thumbnails.large.url)) { image in
+            AsyncImage(url: URL(string: surfSpot.fields.photos[0].thumbnails.small.url)) { image in
                 image
                         .resizable()
                         .clipShape(Rectangle())
@@ -30,10 +30,10 @@ struct SurfSpotRow: View {
             
             Spacer()
             
-            if surfSpot.fields.isFavorite {
-                Image(systemName: "star.fill")
-                    .foregroundColor(.yellow)
-                }
+//            if surfSpot.isFavorite {
+//                Image(systemName: "star.fill")
+//                    .foregroundColor(.yellow)
+//                }
         }
     }
 }
@@ -42,8 +42,8 @@ struct SurfSpotRow_Previews: PreviewProvider {
     static var surfSpots = ModelSurfSpotsData().surfSpots
     static var previews: some View {
         Group {
-            SurfSpotRow(surfSpot: surfSpots.records[0])
-            SurfSpotRow(surfSpot: surfSpots.records[1])
+            SurfSpotRow(surfSpot: surfSpots[0])
+            SurfSpotRow(surfSpot: surfSpots[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
 
