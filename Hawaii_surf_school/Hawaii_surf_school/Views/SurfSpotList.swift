@@ -12,14 +12,15 @@ struct SurfSpotList: View {
     @State private var showFavoritesOnly =  false
     
     var filteredSurfSpots: [Record] {
-        ModelSurfSpotsData.surfSpots.records.filter { surfSpot in
-            (!showFavoritesOnly || surfSpot.fields.isFavorite)
-            }
+
+        ModelSurfSpotsData.surfSpots
         }
+    
     
     var body: some View {
         NavigationView {
             List {
+                
                 ForEach(filteredSurfSpots) { surfSpot in
                     NavigationLink {
                         SurfSpotDetail(surfSpot: surfSpot)
@@ -28,6 +29,9 @@ struct SurfSpotList: View {
                     }
                 }
             }
+            .onAppear(perform: {
+                ModelSurfSpotsData.getSpots()
+            })
             .navigationTitle("Surf Spots de fifou")
         }
     }
@@ -35,11 +39,7 @@ struct SurfSpotList: View {
 
 struct SurfSpotList_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE (2nd generation)", "iPhone XS Max"], id: \.self) { deviceName in
-                    SurfSpotList()
-                        .previewDevice(PreviewDevice(rawValue: deviceName))
-                        .previewDisplayName(deviceName)
-                        .environmentObject(ModelSurfSpotsData())
-                }
-    }
+            SurfSpotList()
+                .environmentObject(ModelSurfSpotsData())
+        }
 }

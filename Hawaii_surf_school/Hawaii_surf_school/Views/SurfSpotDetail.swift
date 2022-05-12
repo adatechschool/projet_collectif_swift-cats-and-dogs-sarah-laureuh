@@ -11,7 +11,7 @@ import MapKit
 
 struct SurfSpotDetail: View {
     
-    @EnvironmentObject var ModelSurfSpotsData: ModelSurfSpotsData
+    @EnvironmentObject var modelSurfSpotsData: ModelSurfSpotsData
     var surfSpot: Record
     
     var body: some View {
@@ -97,7 +97,7 @@ struct SurfSpotDetail_Previews: PreviewProvider {
     static let modelSurfSpotsData = ModelSurfSpotsData()
     
     static var previews: some View {
-        SurfSpotDetail(surfSpot: ModelSurfSpotsData().surfSpots.records[0])
+        SurfSpotDetail(surfSpot: ModelSurfSpotsData().surfSpots[0])
             .environmentObject(modelSurfSpotsData)
         
     }

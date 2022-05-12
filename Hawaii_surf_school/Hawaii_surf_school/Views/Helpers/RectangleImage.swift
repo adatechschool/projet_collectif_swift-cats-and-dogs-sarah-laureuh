@@ -21,6 +21,7 @@ struct RectangleImage_Previews: PreviewProvider {
     static let surfSpots = ModelSurfSpotsData().surfSpots
 
     static var previews: some View {
-        AsyncImage(url: URL (string: surfSpots.records[0].fields.photos[0].thumbnails.small.url))
+        AsyncImage(url: URL (string: surfSpots[0].fields.photos[0].thumbnails.small.url))
+
     }
 }

@@ -11,78 +11,98 @@
 
 import Foundation
 
-// MARK: - SurfSpot
+import SwiftUI
+import Foundation
+import CoreLocation
+import UIKit
+
+
+// MARK: - SpotsData
 struct SurfSpot: Codable {
-    let records: [Record]
-    let offset: String
+    var records: [Record]
 }
+
 // MARK: - Record
 struct Record: Codable, Identifiable {
     let id: String
     let fields: Fields
-    let createdTime: String
 }
 
 // MARK: - Fields
-struct Fields: Codable {
+struct Fields: Codable,Identifiable {
+    var id: UUID = UUID()
+    
     let surfBreak: [String]
     let difficultyLevel: Int
     let destination: String
-    let geocode: String
-    let influencers: [String]
-    let magicSeaweedLink: String
     let photos: [Photo]
-    let peakSurfSeasonBegins, destinationStateCountry, peakSurfSeasonEnds, address: String
-    let isFavorite: Bool
-
+    let destinationStateCountry : String
+    let geocode: String
+    let address: String
+    let seasonStart: String
+    let seasonEnd: String
+    let link : String
+    
     enum CodingKeys: String, CodingKey {
         case surfBreak = "Surf Break"
         case difficultyLevel = "Difficulty Level"
         case destination = "Destination"
-        case geocode = "Geocode"
-        case influencers = "Influencers"
-        case magicSeaweedLink = "Magic Seaweed Link"
         case photos = "Photos"
-        case peakSurfSeasonBegins = "Peak Surf Season Begins"
         case destinationStateCountry = "Destination State/Country"
-        case peakSurfSeasonEnds = "Peak Surf Season Ends"
         case address = "Address"
-        case isFavorite = "isFavorite"
+        case geocode = "Geocode"
+        case seasonStart = "Peak Surf Season Begins"
+        case seasonEnd = "Peak Surf Season Ends"
+        case link = "Magic Seaweed Link"
     }
-
 }
-
-//// MARK: - Geocode
-//struct Geocode: Codable {
-//    let i: String
-//    let o: O
-//    let e: Int
-//}
-//
-//// MARK: - O
-//struct O: Codable {
-//    let status, formattedAddress: String
-//    let lat, lng: Double
-//}
-
 
 // MARK: - Photo
 struct Photo: Codable {
-    let id, url, filename: String
-    let size: Int
-    let type: String
+    //let id: String
+    let url: String
+    //let filename: String
+    //let size: Int
+    //let type: String
     let thumbnails: Thumbnails
-    
-// MARK: - Thumbnails
-struct Thumbnails: Codable {
-    let small, large, full: Full
 }
 
+// MARK: - Thumbnails
+struct Thumbnails: Codable {
+    let small, large, full: Resolution
+}
 
 // MARK: - Full
-struct Full: Codable {
+struct Resolution: Codable {
     let url: String
     let width, height: Int
 }
 
-}
+//struct Geocode: Codable {
+//    
+//    var i: String
+//    var o: Obj
+//    var e: Int
+//}
+//
+//struct Obj: Codable {
+//    var status, formattedAddress: String, lat, lng: Double
+//}
+//
+//extension String {
+//    
+//    func base64Encoded() -> String? {
+//        return data(using: .utf8)?.base64EncodedString()
+//    }
+//    
+//    func base64Decoded() -> String? {
+//        guard let data = Data(base64Encoded : self, options: .ignoreUnknownCharacters) else
+//        { return nil}
+//        return String(data: data, encoding: .utf8)
+//    }
+//}
+////A FINIR
+//struct Coordinates : Codable {
+//    var latitude : Double
+//    var longitude : Double
+//}
