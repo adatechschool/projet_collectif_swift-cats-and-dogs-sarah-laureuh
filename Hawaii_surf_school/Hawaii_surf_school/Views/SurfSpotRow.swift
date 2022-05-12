@@ -19,14 +19,13 @@ struct SurfSpotRow: View {
                         .clipShape(Rectangle())
                         .shadow(radius: 7)
                         .cornerRadius(10)
-                        //.offset(y: -100)
-                        //.padding(.bottom, -90)
                     } placeholder: {
                     ProgressView()
                     }
             .frame(width: 50, height: 50)
             
             Text(surfSpot.fields.destination)
+                .fontWeight(.semibold)
             
             Spacer()
             

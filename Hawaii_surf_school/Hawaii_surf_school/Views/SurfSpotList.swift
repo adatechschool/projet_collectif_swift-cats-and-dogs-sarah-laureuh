@@ -17,23 +17,6 @@ struct SurfSpotList: View {
             }
         }
     
-//    struct LandmarkList: View {
-//        var body: some View {
-//            NavigationView {
-//                List(landmarks) { landmark in
-//                    NavigationLink {
-//                        LandmarkDetail(landmark: landmark)
-//                    } label: {
-//                        LandmarkRow(landmark: landmark)
-//                    }
-//                }
-//                .navigationTitle("Landmarks")
-//            }
-//        }
-//    }
-    
-    
-    
     var body: some View {
         NavigationView {
             List {
@@ -62,7 +45,5 @@ struct SurfSpotList_Previews: PreviewProvider {
                         .previewDisplayName(deviceName)
                         .environmentObject(ModelSurfSpotsData())
                 }
-        
-
     }
 }
