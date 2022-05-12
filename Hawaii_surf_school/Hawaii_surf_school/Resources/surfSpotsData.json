@@ -13,11 +13,11 @@
                     "recD1zp1pQYc8O7l2",
                     "rec1ptbRPxhS8rRun"
                 ],
-                "Magic Seaweed Link": "<https://magicseaweed.com/Pipeline-Backdoor-Surf-Report/616/>",
+                "Magic Seaweed Link": "https://magicseaweed.com/Pipeline-Backdoor-Surf-Report/616/",
                 "Photos": [
                     {
                         "id": "attf6yu03NAtCuv5L",
-                        "url": "<https://dl.airtable.com/ZuXJZ2NnTF40kCdBfTld_thomas-ashlock-64485-unsplash.jpg>",
+                        "url": "https://dl.airtable.com/ZuXJZ2NnTF40kCdBfTld_thomas-ashlock-64485-unsplash.jpg",
                         "filename": "thomas-ashlock-64485-unsplash.jpg",
                         "size": 688397,
                         "type": "image/jpeg",
@@ -60,7 +60,7 @@
                     "recD1zp1pQYc8O7l2",
                     "rec1ptbRPxhS8rRun"
                 ],
-                "Magic Seaweed Link": "<https://magicseaweed.com/Skeleton-Bay-Surf-Report/4591/>",
+                "Magic Seaweed Link": "https://magicseaweed.com/Skeleton-Bay-Surf-Report/4591/",
                 "Photos": [
                     {
                         "id": "attKinKKZvgdS5A5U",
@@ -91,6 +91,7 @@
                 "Destination State/Country": "Namibia ",
                 "Peak Surf Season Ends": "2018-11-30",
                 "Address": "Skeleton Bay, Namibia "
+
             },
             "createdTime": "2018-05-31T00:16:16.000Z"
         },
@@ -116,7 +117,7 @@
                         "type": "image/jpeg",
                         "thumbnails": {
                             "small": {
-                                "url": "<https://dl.airtable.com/IWP9RPvvSM2pX1sHeigV_small_jeremy-bishop-80371-unsplash.jpg>",
+                                "url": "https://dl.airtable.com/IWP9RPvvSM2pX1sHeigV_small_jeremy-bishop-80371-unsplash.jpg",
                                 "width": 48,
                                 "height": 36
                             },
@@ -126,7 +127,7 @@
                                 "height": 512
                             },
                             "full": {
-                                "url": "<https://dl.airtable.com/eZxgLD8hRI2Y27J39LNl_full_jeremy-bishop-80371-unsplash.jpg>",
+                                "url": "https://dl.airtable.com/eZxgLD8hRI2Y27J39LNl_full_jeremy-bishop-80371-unsplash.jpg",
                                 "width": 3000,
                                 "height": 2250
                             }

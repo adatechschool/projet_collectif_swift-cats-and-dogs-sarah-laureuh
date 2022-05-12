@@ -12,19 +12,14 @@ struct SurfSpotList: View {
     @State private var showFavoritesOnly =  false
     
     var filteredSurfSpots: [Record] {
-        ModelSurfSpotsData.surfSpots//.records.filter { surfSpot in
-//            (!showFavoritesOnly || surfSpot.fields.isFavorite)
-//            }
+
+        ModelSurfSpotsData.surfSpots
         }
     
     
     var body: some View {
         NavigationView {
             List {
-                
-//                Toggle(isOn: $showFavoritesOnly) {
-//                    Text("Favorites only")
-//                }
                 
                 ForEach(filteredSurfSpots) { surfSpot in
                     NavigationLink {

@@ -13,12 +13,6 @@ struct SurfSpotDetail: View {
     
     @EnvironmentObject var modelSurfSpotsData: ModelSurfSpotsData
     var surfSpot: Record
-
-    
-    var surfSpotIndex: Int {
-        return 0 //modelSurfSpotsData.surfSpots.firstIndex(where: { $0.id == surfSpot.id })!
-
-    }
     
     var body: some View {
         ScrollView {
@@ -49,14 +43,14 @@ struct SurfSpotDetail: View {
                             .foregroundColor(Color.blue)
                             .multilineTextAlignment(.center)
                             .padding(-3.0)
-    //                    FavoriteButton(isSet: $ModelSurfSpotsData.surfSpots[surfSpotIndex].isFavorite)
                     }
                     
                     HStack {
                         Text(surfSpot.fields.address)
                             .font(.subheadline)
                         Spacer()
-                        Text("hello world")
+                        
+                        Text("Difficulté : \(surfSpot.fields.difficultyLevel) * 🌊")
                         
                     }
                     
@@ -64,10 +58,31 @@ struct SurfSpotDetail: View {
                     .foregroundColor(.secondary)
                     
                     Divider()
+                  
 
-                    Text("")
-                          .font(.title2)
-                    Text("Descriptive text goes here.")
+                    Text("Saison de surf")
+                          .font(.title3)
+                          .fontWeight(.semibold)
+                          .foregroundColor(Color.blue)
+                    
+                    Text("Début : \(surfSpot.fields.peakSurfSeasonBegins)")
+                        .font(.subheadline)
+                        .foregroundColor(Color.green)
+
+                    Text("Fin : \(surfSpot.fields.peakSurfSeasonEnds)")
+                        .font(.subheadline)
+                        .padding(.bottom)
+                        .foregroundColor(Color.red)
+                    
+                    Text("Météo des vagues ☀️")
+                          .font(.title3)
+                          .fontWeight(.semibold)
+                          .foregroundColor(Color.blue)
+                    
+                    Text("\(surfSpot.fields.magicSeaweedLink)")
+                        .font(.subheadline)
+                        .foregroundColor(Color.blue)
+            
                 }
                 .padding()
                 Spacer()
