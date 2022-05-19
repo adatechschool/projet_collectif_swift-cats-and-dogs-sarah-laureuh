@@ -47,7 +47,7 @@ final class ModelSurfSpotsData: ObservableObject {
     @Published var surfSpots: [Record] = []
 
     func getSpots() {
-        guard let url = URL(string: "https://api.airtable.com/v0/appxT9ln6ixuCb3o1/Surf%20Destinations?api_key=keyPpWvMtqCvCq3nB") else { fatalError("Missing URL") }
+        guard let url = URL(string: "http://localhost:8080/spots") else { fatalError("Missing URL") }
 
         let urlRequest = URLRequest(url: url)
 
