@@ -17,7 +17,7 @@ import CoreLocation
 import UIKit
 
 // MARK: - SurfSpot
-struct SurfSpot: Codable {
+struct SurfSpot: Decodable {
     let records: [Record]
 }
 
@@ -26,7 +26,8 @@ struct Record: Codable, Identifiable {
     let id, createdTime, surfBreak: String
     let difficultyLevel: Int
     let destination: String
-    let geocode: GeocodeUnion
+    let latitude: Float64
+    let longitude: Float64
     let magicSeaweedLink: String
     let photos: String
     let peakSurfSeasonBegins, destinationStateCountry, peakSurfSeasonEnds, address: String
@@ -36,7 +37,8 @@ struct Record: Codable, Identifiable {
         case surfBreak = "Surf Break"
         case difficultyLevel = "Difficulty Level"
         case destination = "Destination"
-        case geocode = "Geocode"
+        case latitude = "Latitude"
+        case longitude = "Longitude"
         case magicSeaweedLink = "Magic Seaweed Link"
         case photos = "Photos"
         case peakSurfSeasonBegins = "Peak Surf Season Begins"
@@ -46,38 +48,7 @@ struct Record: Codable, Identifiable {
     }
 }
 
-enum GeocodeUnion: Codable {
-    case geocodeClass(GeocodeClass)
-    case string(String)
 
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if let x = try? container.decode(String.self) {
-            self = .string(x)
-            return
-        }
-        if let x = try? container.decode(GeocodeClass.self) {
-            self = .geocodeClass(x)
-            return
-        }
-        throw DecodingError.typeMismatch(GeocodeUnion.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for GeocodeUnion"))
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        switch self {
-        case .geocodeClass(let x):
-            try container.encode(x)
-        case .string(let x):
-            try container.encode(x)
-        }
-    }
-}
-
-// MARK: - GeocodeClass
-struct GeocodeClass: Codable {
-    let latitude, longitude: Double
-}
 
     
 //// MARK: - SpotsData

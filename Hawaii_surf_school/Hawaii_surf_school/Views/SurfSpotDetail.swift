@@ -14,14 +14,18 @@ struct SurfSpotDetail: View {
     @EnvironmentObject var modelSurfSpotsData: ModelSurfSpotsData
     var surfSpot: Record
     
+    var surfSpotIndex: Int {
+        modelSurfSpotsData.surfSpots.firstIndex(where: {$0.id == surfSpot.id})!
+    }
+    
     var body: some View {
         ScrollView {
-            VStack{
+            MapView(coordinate: CLLocationCoordinate2D(latitude: surfSpot.latitude, longitude: surfSpot.longitude))
+                .ignoresSafeArea(edges: .top)
+                .frame(height: 300)
                 
-                MapView()
-
-                AsyncImage(url: URL(string: surfSpot.photos)) { image in
-                    image
+            AsyncImage(url: URL(string: surfSpot.photos)) { image in
+                image
                             .resizable()
                             .scaledToFill()
                             .clipShape(Rectangle())
@@ -29,13 +33,13 @@ struct SurfSpotDetail: View {
                             .cornerRadius(10)
                             .offset(y: -100)
                             .padding(.bottom, -90)
-                        } placeholder: {
-                        ProgressView()
-                        }
+                    } placeholder: {
+                    ProgressView()
+                    }
                 .frame(width: 300, height: 150)
                 
                 
-                VStack(alignment: .leading) {
+            VStack(alignment: .leading) {
                     HStack {
                         Text(surfSpot.destination)
                             .font(.largeTitle)
@@ -91,7 +95,6 @@ struct SurfSpotDetail: View {
             .navigationBarTitleDisplayMode(.inline)
         }
     }
-}
 
 struct SurfSpotDetail_Previews: PreviewProvider {
     static let modelSurfSpotsData = ModelSurfSpotsData()
@@ -99,7 +102,6 @@ struct SurfSpotDetail_Previews: PreviewProvider {
     static var previews: some View {
         SurfSpotDetail(surfSpot: ModelSurfSpotsData().surfSpots[0])
             .environmentObject(modelSurfSpotsData)
-        
     }
 }
 
