@@ -13,7 +13,7 @@ struct SurfSpotRow: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: surfSpot.fields.photos[0].thumbnails.small.url)) { image in
+            AsyncImage(url: URL(string: surfSpot.photos)) { image in
                 image
                         .resizable()
                         .clipShape(Rectangle())
@@ -24,7 +24,7 @@ struct SurfSpotRow: View {
                     }
             .frame(width: 50, height: 50)
             
-            Text(surfSpot.fields.destination)
+            Text(surfSpot.destination)
                 .fontWeight(.semibold)
             
             Spacer()

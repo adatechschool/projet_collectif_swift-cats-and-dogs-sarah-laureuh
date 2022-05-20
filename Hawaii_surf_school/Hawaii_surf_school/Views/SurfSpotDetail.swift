@@ -20,7 +20,7 @@ struct SurfSpotDetail: View {
                 
                 MapView()
 
-                AsyncImage(url: URL(string: surfSpot.fields.photos[0].thumbnails.large.url)) { image in
+                AsyncImage(url: URL(string: surfSpot.photos)) { image in
                     image
                             .resizable()
                             .scaledToFill()
@@ -37,7 +37,7 @@ struct SurfSpotDetail: View {
                 
                 VStack(alignment: .leading) {
                     HStack {
-                        Text(surfSpot.fields.destination)
+                        Text(surfSpot.destination)
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundColor(Color.blue)
@@ -46,11 +46,11 @@ struct SurfSpotDetail: View {
                     }
                     
                     HStack {
-                        Text(surfSpot.fields.address)
+                        Text(surfSpot.address)
                             .font(.subheadline)
                         Spacer()
                         
-                        Text("Difficulté : \(surfSpot.fields.difficultyLevel) * 🌊")
+                        Text("Difficulté : \(surfSpot.difficultyLevel) * 🌊")
                         
                     }
                     
@@ -65,11 +65,11 @@ struct SurfSpotDetail: View {
                           .fontWeight(.semibold)
                           .foregroundColor(Color.blue)
                     
-                    Text("Début : \(surfSpot.fields.seasonStart)")
+                    Text("Début : \(surfSpot.peakSurfSeasonBegins)")
                         .font(.subheadline)
                         .foregroundColor(Color.green)
 
-                    Text("Fin : \(surfSpot.fields.seasonEnd)")
+                    Text("Fin : \(surfSpot.peakSurfSeasonEnds)")
                         .font(.subheadline)
                         .padding(.bottom)
                         .foregroundColor(Color.red)
@@ -79,7 +79,7 @@ struct SurfSpotDetail: View {
                           .fontWeight(.semibold)
                           .foregroundColor(Color.blue)
                     
-                    Text("\(surfSpot.fields.link)")
+                    Text("\(surfSpot.magicSeaweedLink)")
                         .font(.subheadline)
                         .foregroundColor(Color.blue)
             
@@ -87,7 +87,7 @@ struct SurfSpotDetail: View {
                 .padding()
                 Spacer()
             }
-            .navigationTitle(surfSpot.fields.surfBreak[0])
+            .navigationTitle(surfSpot.surfBreak)
             .navigationBarTitleDisplayMode(.inline)
         }
     }
