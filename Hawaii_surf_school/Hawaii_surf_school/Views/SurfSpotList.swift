@@ -20,7 +20,6 @@ struct SurfSpotList: View {
     var body: some View {
         NavigationView {
             List {
-                
                 ForEach(filteredSurfSpots) { surfSpot in
                     NavigationLink {
                         SurfSpotDetail(surfSpot: surfSpot)

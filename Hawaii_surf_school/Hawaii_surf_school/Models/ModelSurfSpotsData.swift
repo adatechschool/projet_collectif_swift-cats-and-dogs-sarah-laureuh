@@ -14,7 +14,7 @@ final class ModelSurfSpotsData: ObservableObject {
     @Published var surfSpots: [Record] = []
 
     func getSpots() {
-        guard let url = URL(string: "http://localhost:8080/spots") else { fatalError("Missing URL") }
+        guard let url = URL(string: "http://localhost:8080/api/spots") else { fatalError("Missing URL") }
 
         let urlRequest = URLRequest(url: url)
 

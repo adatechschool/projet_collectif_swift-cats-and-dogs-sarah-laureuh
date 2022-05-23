@@ -19,6 +19,8 @@ struct SurfSpotDetail: View {
     }
     
     var body: some View {
+        ZStack{
+            AppColor.main.ignoresSafeArea()
         ScrollView {
             MapView(coordinate: CLLocationCoordinate2D(latitude: surfSpot.latitude, longitude: surfSpot.longitude))
                 .ignoresSafeArea(edges: .top)
@@ -44,7 +46,7 @@ struct SurfSpotDetail: View {
                         Text(surfSpot.destination)
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                            .foregroundColor(Color.blue)
+                            .foregroundColor(AppColor.title)
                             .multilineTextAlignment(.center)
                             .padding(-3.0)
                     }
@@ -59,7 +61,7 @@ struct SurfSpotDetail: View {
                     }
                     
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(AppColor.text)
                     
                     Divider()
                   
@@ -67,32 +69,28 @@ struct SurfSpotDetail: View {
                     Text("Saison de surf")
                           .font(.title3)
                           .fontWeight(.semibold)
-                          .foregroundColor(Color.blue)
+                          .foregroundColor(AppColor.title)
                     
                     Text("Début : \(surfSpot.peakSurfSeasonBegins)")
                         .font(.subheadline)
-                        .foregroundColor(Color.green)
+                        .foregroundColor(AppColor.begin)
 
                     Text("Fin : \(surfSpot.peakSurfSeasonEnds)")
                         .font(.subheadline)
                         .padding(.bottom)
-                        .foregroundColor(Color.red)
+                        .foregroundColor(AppColor.end)
                     
-                    Text("Météo des vagues ☀️")
-                          .font(.title3)
-                          .fontWeight(.semibold)
-                          .foregroundColor(Color.blue)
-                    
-                    Text("\(surfSpot.magicSeaweedLink)")
-                        .font(.subheadline)
-                        .foregroundColor(Color.blue)
-            
+                    Link("Météo des vagues ☀️", destination: URL(string: surfSpot.magicSeaweedLink)!)
+                        .font(.title2)
+                        .foregroundColor(AppColor.title)
+                
                 }
                 .padding()
                 Spacer()
             }
             .navigationTitle(surfSpot.surfBreak)
             .navigationBarTitleDisplayMode(.inline)
+            }
         }
     }
 
