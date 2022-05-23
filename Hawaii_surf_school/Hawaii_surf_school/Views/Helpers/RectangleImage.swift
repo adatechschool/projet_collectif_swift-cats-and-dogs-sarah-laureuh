@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RectangleImage: View {
     var surfSpot: SurfSpot
-    //var image: Image
     var body: some View {
         
         AsyncImage(url: URL(string: surfSpot.records[0].photos))
