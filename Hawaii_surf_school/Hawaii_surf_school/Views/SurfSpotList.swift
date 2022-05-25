@@ -25,11 +25,13 @@ struct SurfSpotList: View {
                         SurfSpotRow(surfSpot: surfSpot)
                     }
                 }
+                NavigationLink("Ajoute ton spot frr!", destination: AddSpot())
             }
             .onAppear(perform: {
                 ModelSurfSpotsData.getSpots()
             })
             .navigationTitle("Surf Spots de fifou")
+           
         }
     }
 }
