@@ -12,10 +12,8 @@ struct SurfSpotList: View {
     @State private var showFavoritesOnly =  false
     
     var filteredSurfSpots: [Record] {
-
-        ModelSurfSpotsData.surfSpots
+            ModelSurfSpotsData.surfSpots
         }
-    
     
     var body: some View {
         NavigationView {
@@ -36,9 +34,10 @@ struct SurfSpotList: View {
     }
 }
 
-struct SurfSpotList_Previews: PreviewProvider {
-    static var previews: some View {
-            SurfSpotList()
-                .environmentObject(ModelSurfSpotsData())
-        }
-}
+
+//struct SurfSpotList_Previews: PreviewProvider {
+//    static var previews: some View {
+//            SurfSpotList()
+//                .environmentObject(ModelSurfSpotsData)
+//        }
+//}

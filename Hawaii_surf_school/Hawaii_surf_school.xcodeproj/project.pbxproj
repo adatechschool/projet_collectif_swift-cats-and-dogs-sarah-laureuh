@@ -24,6 +24,7 @@
 		00B0506028212093007FA754 /* ModelSurfSpotsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B0505F28212093007FA754 /* ModelSurfSpotsData.swift */; };
 		00B05064282132D6007FA754 /* surfSpotsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 00B05063282132D6007FA754 /* surfSpotsData.json */; };
 		00B05066282133EF007FA754 /* SurfSpotRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B05065282133EF007FA754 /* SurfSpotRow.swift */; };
+		00CE162D283D077D00C8C87E /* AddSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CE162C283D077D00C8C87E /* AddSpot.swift */; };
 		9595D6D9282BE47000F4154A /* worldMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9595D6D8282BE47000F4154A /* worldMap.png */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		00B0505F28212093007FA754 /* ModelSurfSpotsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSurfSpotsData.swift; sourceTree = "<group>"; };
 		00B05063282132D6007FA754 /* surfSpotsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = surfSpotsData.json; sourceTree = "<group>"; };
 		00B05065282133EF007FA754 /* SurfSpotRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfSpotRow.swift; sourceTree = "<group>"; };
+		00CE162C283D077D00C8C87E /* AddSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpot.swift; sourceTree = "<group>"; };
 		9595D6D8282BE47000F4154A /* worldMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = worldMap.png; path = Hawaii_surf_school/Assets.xcassets/worldMap.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 				00822DE92821594A00B7EAC6 /* SurfSpotList.swift */,
 				00822DEB28215C0800B7EAC6 /* SurfSpotDetail.swift */,
 				0060D79D283BCA5D0092E335 /* AppColor.swift */,
+				00CE162C283D077D00C8C87E /* AddSpot.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				00B05066282133EF007FA754 /* SurfSpotRow.swift in Sources */,
 				00B0505E28211955007FA754 /* SurfSpot.swift in Sources */,
 				0060D79E283BCA5D0092E335 /* AppColor.swift in Sources */,
+				00CE162D283D077D00C8C87E /* AddSpot.swift in Sources */,
 				00822DEA2821594A00B7EAC6 /* SurfSpotList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

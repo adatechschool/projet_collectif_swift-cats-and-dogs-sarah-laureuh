@@ -10,12 +10,10 @@ import SwiftUI
 
 struct SpotView: View {
     var body: some View {
-        ZStack{
-            AppColor.main.ignoresSafeArea()
-            SurfSpotList()
-        }
+        SurfSpotList()
     }
 }
+            
 
 struct SpotView_Previews: PreviewProvider {
     static var previews: some View {

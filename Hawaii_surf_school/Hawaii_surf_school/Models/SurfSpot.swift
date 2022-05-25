@@ -22,7 +22,7 @@ struct SurfSpot: Decodable {
 }
 
 // MARK: - Record
-struct Record: Codable, Identifiable {
+struct Record: Identifiable, Codable {
     let id, createdTime, surfBreak: String
     let difficultyLevel: Int
     let destination: String
@@ -31,6 +31,7 @@ struct Record: Codable, Identifiable {
     let magicSeaweedLink: String
     let photos: String
     let peakSurfSeasonBegins, destinationStateCountry, peakSurfSeasonEnds, address: String
+
 
     enum CodingKeys: String, CodingKey {
         case id, createdTime
@@ -47,4 +48,3 @@ struct Record: Codable, Identifiable {
         case address = "Address"
     }
 }
-
