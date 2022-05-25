@@ -25,7 +25,7 @@ struct SurfSpotList: View {
                         SurfSpotRow(surfSpot: surfSpot)
                     }
                 }
-                NavigationLink("Ajoute ton spot frr!", destination: AddSpot())
+                NavigationLink("Ajoute ton spot frr 🤙", destination: AddSpot())
             }
             .onAppear(perform: {
                 ModelSurfSpotsData.getSpots()
